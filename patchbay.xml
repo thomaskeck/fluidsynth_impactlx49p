@@ -1,0 +1,27 @@
+<!DOCTYPE patchbay>
+<patchbay version="0.9.0" name="patchbay">
+ <output-sockets>
+  <socket client="Impact\ LX49\+" name="Impact LX49" exclusive="off" type="alsa-midi">
+   <plug>Impact\ LX49\+\ MIDI\ 1</plug>
+  </socket>
+  <socket client="fluidsynth" name="fluidsynth 1" exclusive="off" type="jack-audio">
+   <plug>right</plug>
+   <plug>left</plug>
+  </socket>
+ </output-sockets>
+ <input-sockets>
+  <socket client="FLUID\ Synth\ \([0-9]+\)" name="FLUID Synth" exclusive="off" type="alsa-midi">
+   <plug>Synth\ input\ port\ \([0-9]+\:0\)</plug>
+  </socket>
+  <socket client="Tiger\ Lake\-LP\ Smart\ Sound\ Technology\ Audio\ Controller\ Speaker\ \+\ Headphones" name="Tiger\ Lake\-LP\ Smart\ Sound\ Technology\ Audio\ Controller\ Speaker\ \+\ Headphones 1" exclusive="off" type="jack-audio">
+   <plug>playback_FR</plug>
+   <plug>playback_FL</plug>
+  </socket>
+ </input-sockets>
+ <slots/>
+ <cables>
+  <cable input="FLUID Synth" output="Impact LX49" type="alsa-midi"/>
+  <cable input="Tiger\ Lake\-LP\ Smart\ Sound\ Technology\ Audio\ Controller\ Speaker\ \+\ Headphones 1" output="fluidsynth 1" type="jack-audio"/>
+ </cables>
+</patchbay>
+
