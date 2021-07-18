@@ -20,6 +20,7 @@
 #pragma once
 
 #include <fluidsynth.h>
+#include "handler.h"
 
 
 /**
@@ -35,12 +36,6 @@
  * This class handles the remaining events, for instance the custom filter
  * setup.
  */
-
-#pragma once
-
-#include <fluidsynth.h>
-#include "handler.h"
-
 class ModulatorHandler : public Handler {
 
     public:
