@@ -27,6 +27,7 @@
 
 #include <fluidsynth.h>
 
+#include "split_handler.h"
 #include "modulator_handler.h"
 #include "effect_handler.h"
 #include "record_handler.h"
@@ -50,6 +51,7 @@ class MidiKeyboard {
             sfont = loadSfont("fluidr3.sf2");
             adriver = new_fluid_audio_driver(settings, synth);
             mdriver = new_fluid_midi_driver(settings, handle_midi_event, this);
+            handlers.push_back(std::make_unique<SplitHandler>(4));
             handlers.push_back(std::make_unique<EffectHandler>(synth));
             handlers.push_back(std::make_unique<ModulatorHandler>(synth));
             handlers.push_back(std::make_unique<RecordHandler>(sequencer, seq_synth_id));

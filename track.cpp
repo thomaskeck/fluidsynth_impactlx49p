@@ -107,11 +107,14 @@ void Track::scheduleNextCallback() {
     delete_fluid_event(evt);
 }
 
+#include <iostream>
+
 void Track::playNextChunk() {
     int current_time = fluid_sequencer_get_tick(sequencer);
     if (isPlaying()) {
         int remaining_play_duration = getRemainingPlayDuration();
         if (remaining_play_duration < 0) {
+            std::cout << "restart " << remaining_play_duration << std::endl;
             // We pretend to have started at the right time in between the callbacks.
             play_start_time = current_time + remaining_play_duration;
             play_current_time = current_time;

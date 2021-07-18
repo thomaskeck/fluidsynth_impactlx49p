@@ -49,6 +49,11 @@ enum midi_event_type {
  * or by changing the identifier in this enum to the preset of the midi keyboard.
  */
 enum midi_cc {
+    // Freeze split to current channel.
+    SPLIT1_BUTTON = 30,
+    SPLIT2_BUTTON = 31,
+    SPLIT3_BUTTON = 32,
+    SPLIT4_BUTTON = 33,
     // Chorus and reverb controller.
     CHORUS_BUTTON = 35,
     REVERB_BUTTON = 36,
