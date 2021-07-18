@@ -1,5 +1,5 @@
 /**
- * Fluidsynth for ImpactLX48P
+ * Fluidsynth for ImpactLX49+
  * 
  * Copyright (C) 2021 Thomas Keck
  * 
